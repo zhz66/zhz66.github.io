@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>my_first_page | Step by step up</title>
+  <title>安装Brian2那些事 | Step by step up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="*[��֪��дЩʲô]��https://www.cnblogs.com/liugang-vip/p/6337580.html��">
-<meta property="og:type" content="website">
-<meta property="og:title" content="my_first_page">
-<meta property="og:url" content="http://yoursite.com/my-first-page/index.html">
+  <meta name="description" content="Question1:How to install Brian2? First method: by conda.(由于国内的清华源和中科院源停止更新，所以此方法没试过）。1234567conda install -c conda-forge brian2conda install matplotlib nose ipython jupyterconda install -c brian-team">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装Brian2那些事">
+<meta property="og:url" content="http://yoursite.com/2020/02/23/安装Brian2那些事/index.html">
 <meta property="og:site_name" content="Step by step up">
-<meta property="og:description" content="*[��֪��дЩʲô]��https://www.cnblogs.com/liugang-vip/p/6337580.html��">
+<meta property="og:description" content="Question1:How to install Brian2? First method: by conda.(由于国内的清华源和中科院源停止更新，所以此方法没试过）。1234567conda install -c conda-forge brian2conda install matplotlib nose ipython jupyterconda install -c brian-team">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-06T08:06:31.866Z">
+<meta property="og:updated_time" content="2020-02-23T15:24:39.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my_first_page">
-<meta name="twitter:description" content="*[��֪��дЩʲô]��https://www.cnblogs.com/liugang-vip/p/6337580.html��">
+<meta name="twitter:title" content="安装Brian2那些事">
+<meta name="twitter:description" content="Question1:How to install Brian2? First method: by conda.(由于国内的清华源和中科院源停止更新，所以此方法没试过）。1234567conda install -c conda-forge brian2conda install matplotlib nose ipython jupyterconda install -c brian-team">
   
     <link rel="alternative" href="/atom.xml" title="Step by step up" type="application/atom+xml">
   
@@ -158,27 +158,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-安装Brian2那些事" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my_first_page
+      安装Brian2那些事
     </h1>
   
 
         
-        <a href="/my-first-page/index.html" class="archive-article-date">
-  	<time datetime="2019-09-17T11:37:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+        <a href="/2020/02/23/安装Brian2那些事/" class="archive-article-date">
+  	<time datetime="2020-02-23T14:38:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>*[��֪��дЩʲô]��<a href="https://www.cnblogs.com/liugang-vip/p/6337580.html��" target="_blank" rel="noopener">https://www.cnblogs.com/liugang-vip/p/6337580.html��</a></p>
+        <h3 id="Question1-How-to-install-Brian2"><a href="#Question1-How-to-install-Brian2" class="headerlink" title="Question1:How to install Brian2?"></a>Question1:How to install Brian2?</h3><ul>
+<li>First method: by conda.(由于国内的清华源和中科院源停止更新，所以此方法没试过）。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge brian2</span><br><span class="line">conda install matplotlib nose ipython jupyter</span><br><span class="line">conda install -c brian-team brian2tools</span><br><span class="line">``` </span><br><span class="line">* Second method: by pip.</span><br><span class="line">``` bash</span><br><span class="line">pipXXX install (--user) brian2</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<pre><code class="bash">由于博主安装多个版本pip，例如你的python3.5.X版本的pip是pip3.5，
+则上述代码写成：pip3.5 install brian2 </code></pre>
+<h3 id="Question2-checking-other-relevant-module"><a href="#Question2-checking-other-relevant-module" class="headerlink" title="Question2:checking other relevant module"></a>Question2:checking other relevant module</h3><pre><code class="bash"> usually ,you need these module as follows:
+numpy（科学计算），matplotlib（绘图），cython， scipy（科学计算），norse（单元测试）
+ You can open a terminal and input:
+    pythonXXX
+    import numpy as nm 
+    IF：
+    &gt;&gt;&gt;NO Module named numpy
+    You need to install numpy: pipXXX install numpy</code></pre>
+<ul>
+<li>Especially, when you try to install the module norse you will failed ,Don’t Scared: <a href="https://python.ctolib.com/norse-norse.html" target="_blank" rel="noopener">Click me !!!!!!!!!!!! Or copy down</a></li>
+</ul>
+<pre><code class="bash">sudo apt install git
+git <span class="built_in">clone</span> https://github.com/norse/norse
+<span class="built_in">cd</span> norse
+pipXXX install -e .
+You must to attention a detail . after e.</code></pre>
+<h3 id="Question3-How-do-you-deal-with-the-lack-of-your-VMWARE’s-store"><a href="#Question3-How-do-you-deal-with-the-lack-of-your-VMWARE’s-store" class="headerlink" title="Question3: How do you deal with the lack of your VMWARE’s store ?"></a>Question3: How do you deal with the lack of your VMWARE’s store ?</h3><p> approach1：delete somethings，and balabal.<br> approach2 : 打开虚拟机设置，点击硬盘，扩充容量，开机之后进入终端输入以下命令:</p>
+<pre><code class="bash"> sudo apt-get install gparted
+sudo gparted
+安装之后你就可以通过gparted扩展分区了，如果你想扩充20G的分区，你需要将 dev/fsda2/下面的swap分区先OFF,右键某一个分区，点击XXX/XX的选项，然后就可以随意滑动分区。
+原理就是磁盘从左到右是地址递增的，存储盘块就是连续的地址，你想要多少分区分配多少地址就行。</code></pre>
 
       
 
@@ -263,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/my-first-page/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/23/安装Brian2那些事/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,6 +302,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/02/24/Embeded-design-class-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Embeded design class 1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/22/Spiking-Notes-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spiking Notes(1)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -297,7 +343,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="" data-title="my_first_page" data-url="http://yoursite.com/my-first-page/index.html"></div>
+	<div class="ds-thread" data-thread-key="安装Brian2那些事" data-title="安装Brian2那些事" data-url="http://yoursite.com/2020/02/23/安装Brian2那些事/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -320,8 +366,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/my-first-page/index.html", 
-    sourceId: "",
+    url: "http://yoursite.com/2020/02/23/安装Brian2那些事/", 
+    sourceId: "安装Brian2那些事",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -330,7 +376,7 @@
   
 
   
-  <div id="SOHUCS" sid="" ></div> 
+  <div id="SOHUCS" sid="安装Brian2那些事" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -382,7 +428,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

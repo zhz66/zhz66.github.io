@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>my_first_page | Step by step up</title>
+  <title>Spiking Notes(1) | Step by step up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="*[��֪��дЩʲô]��https://www.cnblogs.com/liugang-vip/p/6337580.html��">
-<meta property="og:type" content="website">
-<meta property="og:title" content="my_first_page">
-<meta property="og:url" content="http://yoursite.com/my-first-page/index.html">
+  <meta name="description" content="神经网络模型历史第一代 The first generation is based on McCulloch-Pitts neurons as computational units. These are also referred to as perceptrons or threshold gates.they can only give digital output. In fact the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spiking Notes(1)">
+<meta property="og:url" content="http://yoursite.com/2020/02/22/Spiking-Notes-1/index.html">
 <meta property="og:site_name" content="Step by step up">
-<meta property="og:description" content="*[��֪��дЩʲô]��https://www.cnblogs.com/liugang-vip/p/6337580.html��">
+<meta property="og:description" content="神经网络模型历史第一代 The first generation is based on McCulloch-Pitts neurons as computational units. These are also referred to as perceptrons or threshold gates.they can only give digital output. In fact the">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-06T08:06:31.866Z">
+<meta property="og:image" content="https://i.loli.net/2020/02/23/8657eDC3aJbIG4X.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/23/ZY9smEQWIXSOLxk.png">
+<meta property="og:updated_time" content="2020-02-22T16:56:15.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my_first_page">
-<meta name="twitter:description" content="*[��֪��дЩʲô]��https://www.cnblogs.com/liugang-vip/p/6337580.html��">
+<meta name="twitter:title" content="Spiking Notes(1)">
+<meta name="twitter:description" content="神经网络模型历史第一代 The first generation is based on McCulloch-Pitts neurons as computational units. These are also referred to as perceptrons or threshold gates.they can only give digital output. In fact the">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/23/8657eDC3aJbIG4X.png">
   
     <link rel="alternative" href="/atom.xml" title="Step by step up" type="application/atom+xml">
   
@@ -158,27 +161,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Spiking-Notes-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my_first_page
+      Spiking Notes(1)
     </h1>
   
 
         
-        <a href="/my-first-page/index.html" class="archive-article-date">
-  	<time datetime="2019-09-17T11:37:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
+        <a href="/2020/02/22/Spiking-Notes-1/" class="archive-article-date">
+  	<time datetime="2020-02-22T07:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>*[��֪��дЩʲô]��<a href="https://www.cnblogs.com/liugang-vip/p/6337580.html��" target="_blank" rel="noopener">https://www.cnblogs.com/liugang-vip/p/6337580.html��</a></p>
+        <h2 id="神经网络模型历史"><a href="#神经网络模型历史" class="headerlink" title="神经网络模型历史"></a>神经网络模型历史</h2><h3 id="第一代"><a href="#第一代" class="headerlink" title="第一代"></a>第一代</h3><ul>
+<li>The first generation is based on McCulloch-Pitts neurons as computational units. These are also referred to as perceptrons or threshold gates.<br>they can only give digital output. In fact they are universal for computations with digital input and output, and every boolean function can be computed by some multilayer perceptron with a single hidden layer.<h3 id="第二代（ANN）"><a href="#第二代（ANN）" class="headerlink" title="第二代（ANN）"></a>第二代（ANN）</h3></li>
+<li>The second generation is based on computational units that apply an “activation function” with a continuous set of possible output values to a weighted sum (or polynomial) of the inputs.<br>The second generation can compute certain boolean functions with fewer gates than neural nets from the first generation. In addition, neural nets from the second generation are able to compute functions with analog input and output. Another characteristic feature of this second generation of neural network models is that they support learning algorithms that are based on gradient descent such as backprop.<br>However, at least with regard to fast analog computations by networks of neurons in the cortex, the “firing rate interpretation” itself has become questionable. <h3 id="第三代（SNN）"><a href="#第三代（SNN）" class="headerlink" title="第三代（SNN）"></a>第三代（SNN）</h3></li>
+<li>Many biological neural systems use the timing of single action potentials (or “spikes”) to encode information.A third generation of neural<br>network models which employ spiking neurons (or “integrate-and-fire neurons”) as computational units.</li>
+</ul>
+<h2 id="脉冲神经网络基础知识："><a href="#脉冲神经网络基础知识：" class="headerlink" title="脉冲神经网络基础知识："></a>脉冲神经网络基础知识：</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><pre><code class="bash">The timing of individual computation steps plays a key role <span class="keyword">for</span> computations <span class="keyword">in</span> networks of spiking neurons. </code></pre>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><pre><code class="bash">In the simplest (deterministic) model of a spiking neuron one assumes that a neuron v fires whenever its <span class="string">"potential"</span> Pv (<span class="built_in">which</span> models the electric membrane potential at the <span class="string">"trigger zone"</span> of neuron v) reaches a certain threshold ®v. This potential Pv is the sum of so-called excitatory postsynaptic potentials (<span class="string">"EPSPs"</span>) and inhibitory postsynaptic potentials (<span class="string">"IPSPs"</span>), <span class="built_in">which</span> result from the firing of other neurons u that are connected through a <span class="string">"synapse"</span> to neuron v. </code></pre>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><pre><code class="bash">突触前神经元U在s时刻的放电对于t时刻Pv的影响（贡献）由以下算式决定：Wu,v · Qu，v（t<span class="_">-s</span>）。权重Wu，v≥0, Qu,v(t<span class="_">-s</span>)是响应函数。权重Wu，v代表神经元u与v之间突触的效能。</code></pre>
+<h3 id="4-历史上第一个正式的SNN模型的要素："><a href="#4-历史上第一个正式的SNN模型的要素：" class="headerlink" title="4.历史上第一个正式的SNN模型的要素："></a>4.历史上第一个正式的SNN模型的要素：</h3><pre><code class="bash">有限个数的脉冲神经元集合V；神经元突触集合E（V×V）；一个权重Wu，v ≥0；一个响应函数Qu，v（针对那些属于E并且权重大于0的突触设置的）；一个阈值函数Hv。</code></pre>
+<h3 id="5-阈值函数图像"><a href="#5-阈值函数图像" class="headerlink" title="5.阈值函数图像:"></a>5.阈值函数图像:</h3><p><img src="https://i.loli.net/2020/02/23/8657eDC3aJbIG4X.png" alt="阈值函数图像"></p>
+<h3 id="6-第一个正式的SNN模型中的Pv公式"><a href="#6-第一个正式的SNN模型中的Pv公式" class="headerlink" title="6.第一个正式的SNN模型中的Pv公式:"></a>6.第一个正式的SNN模型中的Pv公式:</h3><p><img src="https://i.loli.net/2020/02/23/ZY9smEQWIXSOLxk.png" alt="激活电势Pv"></p>
 
       
 
@@ -263,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/my-first-page/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/22/Spiking-Notes-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,6 +288,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/02/23/安装Brian2那些事/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          安装Brian2那些事
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/17/my-first-article/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">my_first_article</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -297,7 +329,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="" data-title="my_first_page" data-url="http://yoursite.com/my-first-page/index.html"></div>
+	<div class="ds-thread" data-thread-key="Spiking-Notes-1" data-title="Spiking Notes(1)" data-url="http://yoursite.com/2020/02/22/Spiking-Notes-1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -320,8 +352,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/my-first-page/index.html", 
-    sourceId: "",
+    url: "http://yoursite.com/2020/02/22/Spiking-Notes-1/", 
+    sourceId: "Spiking-Notes-1",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -330,7 +362,7 @@
   
 
   
-  <div id="SOHUCS" sid="" ></div> 
+  <div id="SOHUCS" sid="Spiking-Notes-1" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -382,7 +414,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
