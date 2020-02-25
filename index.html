@@ -159,6 +159,162 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-The-road-of-blog-after-vicissitudes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/25/The-road-of-blog-after-vicissitudes/">The road of blog after vicissitudes</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/25/The-road-of-blog-after-vicissitudes/" class="archive-article-date">
+  	<time datetime="2020-02-25T14:03:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="很多同学看到英文的标题就不愿意点进来了，在此解释一下，你们看英文有多难受（类比看到数学就头疼）"><a href="#很多同学看到英文的标题就不愿意点进来了，在此解释一下，你们看英文有多难受（类比看到数学就头疼）" class="headerlink" title="很多同学看到英文的标题就不愿意点进来了，在此解释一下，你们看英文有多难受（类比看到数学就头疼）"></a>很多同学看到英文的标题就不愿意点进来了，在此解释一下，你们看英文有多难受（类比看到数学就头疼）</h2><p>我在整个建立和使用hexo+github建立博客的时候比你们还难受。此篇博客虽然摘录了其他博客，但是本博主的教程绝对值得一看，可以节省同学们的大量时间。 本文是建立在WINDOS基础上建立的，LINUX系统有些步骤会有些许出入。你们可以专门找LINUX版本的博客，如果没有请发邮件我给我，我去试错。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8说了，下面进入正题，老八秘制小汉堡，便宜实惠还管饱，加油，奥利给！！！！！！！！！！！！</span><br></pre></td></tr></table></figure>
+
+<h1 id="一、准备工作："><a href="#一、准备工作：" class="headerlink" title="一、准备工作："></a>一、准备工作：</h1><h2 id="你需要做的准备工作有如下几样：安装ssh（WIN10自带），github账号，Github客户端，node-js环境，安装git。"><a href="#你需要做的准备工作有如下几样：安装ssh（WIN10自带），github账号，Github客户端，node-js环境，安装git。" class="headerlink" title="你需要做的准备工作有如下几样：安装ssh（WIN10自带），github账号，Github客户端，node.js环境，安装git。"></a>你需要做的准备工作有如下几样：安装ssh（WIN10自带），github账号，Github客户端，node.js环境，安装git。</h2><h3 id="首先安装ssh、node-js、git"><a href="#首先安装ssh、node-js、git" class="headerlink" title="首先安装ssh、node.js、git"></a>首先安装ssh、node.js、git</h3><p><a href="https://jingyan.baidu.com/article/9158e0002c159ea254122821.html" target="_blank" rel="noopener">WIN7安装ssh</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意一点，在上面教程中，安装默认端口为22的那张图片修改为443，如果没改也不要紧，毕竟这个坑我踩过（明明三个月前22端口还好用，过了个年就完犊子了）。肯定你们都着急去点击安装没仔细看这句话了。</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">安装node.js</a><br><a href="https://blog.csdn.net/qq_43699953/article/details/89440357" target="_blank" rel="noopener">安装git</a></p>
+<h3 id="然后进行github准备操作："><a href="#然后进行github准备操作：" class="headerlink" title="然后进行github准备操作："></a>然后进行github准备操作：</h3><pre><code class="bash">NO.1，注册github账号并且登录进去，在Github首页右上角头像左侧加号点选择 New repositor。</code></pre>
+<p><img src="https://i.loli.net/2020/02/26/LbrmCJ9pQfhXcxM.png" alt="NEXT"></p>
+<pre><code class="bash">图片中红色字的意思就是假设你的github账号是ABC，那么仓库名为：ABC.github.io，也就是Owner的名字加上 .github.io
+创建好了之后点进去仓库，然后看图1点击红色箭头处，然后找到图2的位置，点击choosetheme看图3，设置完毕后你就可以通过 username.github.io(username为你的用户名访问你的博客了)</code></pre>
+<p><img src="https://i.loli.net/2020/02/26/UyQ8NB1IqJvzG9k.png" alt="图1"><br><img src="https://i.loli.net/2020/02/26/rLE5nXD2SwsVQAR.png" alt="图2"><br><img src="https://i.loli.net/2020/02/26/43gvAHzUfh9rJKp.png" alt="图3"><br><a href="https://desktop.github.com/" target="_blank" rel="noopener">下载安装登录你的github账号，然后看图4</a><br><img src="https://i.loli.net/2020/02/26/QJuC1ZO6bNKMix4.png" alt="图4"></p>
+<h1 id="二、配置Hexo（命令均在bash里面敲）"><a href="#二、配置Hexo（命令均在bash里面敲）" class="headerlink" title="二、配置Hexo（命令均在bash里面敲）"></a>二、配置Hexo（命令均在bash里面敲）</h1><h2 id="首先你需要建立一个文件夹，这个文件夹将是你的博客大本营（就是安装HEXO的文件夹）。然后右键选择Git-Bash。（如果发现没有请重新安装图4内容）"><a href="#首先你需要建立一个文件夹，这个文件夹将是你的博客大本营（就是安装HEXO的文件夹）。然后右键选择Git-Bash。（如果发现没有请重新安装图4内容）" class="headerlink" title="首先你需要建立一个文件夹，这个文件夹将是你的博客大本营（就是安装HEXO的文件夹）。然后右键选择Git Bash。（如果发现没有请重新安装图4内容）"></a>首先你需要建立一个文件夹，这个文件夹将是你的博客大本营（就是安装HEXO的文件夹）。然后右键选择Git Bash。（如果发现没有请重新安装图4内容）</h2><p>依次输入如下内容并回车。新版node.js自动安装npm，如果提示无npm自行解决吧。。<br>npm install hexo-cli -g<br>hexo init #初始化网站<br>npm install<br>hexo g #生成或 hexo generate<br>hexo s #启动本地服务器 或者 hexo server,这一步之后就可以通过<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>  查看了<br>如果你可以查看hexo网页证明你安装成功，如果你遇到了问题core-js@&lt;2.6.8 is no longer maintained.那么点击下面链接<br><a href="https://www.cnblogs.com/hoyong/articles/11179598.html" target="_blank" rel="noopener">点我点我点我</a><br><a href="https://www.jianshu.com/p/7b8faf77d1af" target="_blank" rel="noopener">相关HEXO命令,等看完最后你在看这个也不迟，心急吃不了热豆腐</a></p>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>hexo clean<br>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>找到根目录_config.yml 文件,打开找到 theme：属性并设置为yilia<br>cd themes/yilia<br>git pull<br>hexo g<br>hexo s<br>此时查看<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就有新的主题了，yilia相关配置，这个没怎么配置，不过找到了篇常用的设置，图床部分可以使用它的。<br><a href="https://blog.csdn.net/lynnbest/article/details/79845944" target="_blank" rel="noopener">yilia，click me</a></p>
+<h1 id="三、配置博客到github上。"><a href="#三、配置博客到github上。" class="headerlink" title="三、配置博客到github上。"></a>三、配置博客到github上。</h1><h2 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h2><p>deploy:<br>    type: git<br>    repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:ABC/ABC.github.io.git  #将ABC换成你自己的用户名即可，两处都要替换<br>    branch: master<br>然后保存退出，在bash里面输入：npm install hexo-deployer-git –save   </p>
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>cd ~/.ssh<br>ssh-keygen -t rsa -C “注册github的邮箱地址” #例如：ssh-keygen -t rsa -C “<a href="mailto:12345686@qq.com" target="_blank" rel="noopener">12345686@qq.com</a>“<br>根据提示操作直到一个奇奇怪怪的形状出现。</p>
+<h2 id="然后登陆github官网根据图片操作即可。"><a href="#然后登陆github官网根据图片操作即可。" class="headerlink" title="然后登陆github官网根据图片操作即可。"></a>然后登陆github官网根据图片操作即可。</h2><p>百度搜索开启查看隐藏文件，最后一张图需要复制的东西在 C:\Users\用户名\ .ssh文件夹下后缀名为.pub的文件中。<br><img src="https://i.loli.net/2020/02/26/6ya9BAtip8DVk4K.png" alt="1"><br><img src="https://i.loli.net/2020/02/26/XBlTJ3Qoae4cVub.png" alt="2"><br><img src="https://i.loli.net/2020/02/26/I8HyEJMvt5PFKbZ.png" alt="3"></p>
+<h3 id="然后测试一下，在bash里面输入"><a href="#然后测试一下，在bash里面输入" class="headerlink" title="然后测试一下，在bash里面输入;"></a>然后测试一下，在bash里面输入;</h3><p>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+<pre><code class="bash">如果提示timeout，或者22端口不可用，那么就是你没仔细看安装ssh的步骤。不过没关系，还有补救办法。
+进入C:\Users\用户名\ .ssh文件夹，然后建立一个config文件，如果不会创建，那么就把文件夹里面已经有的白色文件复制粘贴改个名字。
+[看我看我看我！](![5WDV1JNYZZJ@U@GC5RSEHFI.png](https://i.loli.net/2020/02/26/VsKRMNPi6DdEa5q.png))
+邮箱改成注册的github邮箱，为了惩罚你们，自己敲一遍。</code></pre>
+<p>最后在bash里面输入：<br>git config –global user.name “随便一个名就行”<br>git config –global user.email “github注册的邮箱”    </p>
+<h1 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h1><p>进入bash输入<br>hexo n “abc”<br>hexo g<br>hexo d<br>然后浏览器URL打上你的仓库名字即可，例如：ABC.github.io </p>
+<h1 id="五、埋一点小坑，如何编写自己的博客？"><a href="#五、埋一点小坑，如何编写自己的博客？" class="headerlink" title="五、埋一点小坑，如何编写自己的博客？"></a>五、埋一点小坑，如何编写自己的博客？</h1><h2 id="你都看到这了，自己找一找文件尝试改一哈，至于如何编写，放心我还是爱你们的，下面有蛛丝马迹。"><a href="#你都看到这了，自己找一找文件尝试改一哈，至于如何编写，放心我还是爱你们的，下面有蛛丝马迹。" class="headerlink" title="你都看到这了，自己找一找文件尝试改一哈，至于如何编写，放心我还是爱你们的，下面有蛛丝马迹。"></a>你都看到这了，自己找一找文件尝试改一哈，至于如何编写，放心我还是爱你们的，下面有蛛丝马迹。</h2><p><a href="https://www.jianshu.com/p/936d2908a38f" target="_blank" rel="noopener">点我点我点我！，易懂版</a><br><a href="https://blog.csdn.net/renlzrz/article/details/83545521" target="_blank" rel="noopener">点我点我点我！，炒鸡易懂版</a><br>如果你会写博客了，恭喜你，给你一个实用的图床。<br><a href="https://sm.ms/" target="_blank" rel="noopener">别点我，我怕疼</a></p>
+<p>附上参考的博客（参考的很多，具体框架和图都是这里盗的，不好意思不写）:<a href="https://www.cnblogs.com/jackyroc/p/7681938.html" target="_blank" rel="noopener">https://www.cnblogs.com/jackyroc/p/7681938.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/25/The-road-of-blog-after-vicissitudes/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-科技论文写作-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/25/科技论文写作-1/">科技论文写作-1</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/25/科技论文写作-1/" class="archive-article-date">
+  	<time datetime="2020-02-25T13:30:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="论文分类："><a href="#论文分类：" class="headerlink" title="论文分类："></a>论文分类：</h3><ul>
+<li>学位论文（适合入门打基础看，知网上就行）</li>
+<li>期刊论文（省刊和非核心、核心、EI、SCI）</li>
+<li>会议论文 （国际会议的论文可以看，曲线救国SCI）</li>
+<li>快报 （短小精悍，适合刚火的热点类话题）<h3 id="论文格式：不同论文、不同出版社要求不一致，根据往期的期刊自己掌握即可。"><a href="#论文格式：不同论文、不同出版社要求不一致，根据往期的期刊自己掌握即可。" class="headerlink" title="论文格式：不同论文、不同出版社要求不一致，根据往期的期刊自己掌握即可。"></a>论文格式：不同论文、不同出版社要求不一致，根据往期的期刊自己掌握即可。</h3><h3 id="一些常识格式："><a href="#一些常识格式：" class="headerlink" title="一些常识格式："></a>一些常识格式：</h3><img src="https://i.loli.net/2020/02/25/h8dYeSurTWHU7ix.png" alt="中文标题要求.png"><br><img src="https://i.loli.net/2020/02/25/N87Gl2HOKCgUFPa.png" alt="英文标题.png"><br><img src="https://i.loli.net/2020/02/25/tM5ywThrm1jZUfB.png" alt="中文标题 .png"><br><img src="https://i.loli.net/2020/02/25/mcPDLuUfpkYqnwl.png" alt="关键字要求.png"></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/25/科技论文写作-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Embeded-design-class-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
