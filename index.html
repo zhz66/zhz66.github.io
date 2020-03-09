@@ -159,6 +159,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-cotex-m3-指令学习笔记(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/08/cotex-m3-指令学习笔记(1)/">cotex-m3 指令学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/08/cotex-m3-指令学习笔记(1)/" class="archive-article-date">
+  	<time datetime="2020-03-08T06:25:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="特殊寄存器概述："><a href="#特殊寄存器概述：" class="headerlink" title="特殊寄存器概述："></a>特殊寄存器概述：</h1><h2 id="特殊寄存器组成"><a href="#特殊寄存器组成" class="headerlink" title="特殊寄存器组成"></a>特殊寄存器组成</h2><p><img src="https://i.loli.net/2020/03/08/Gd7PtwFNY3MpIZu.png" alt="特1.png"></p>
+<h2 id="Xpsr说明："><a href="#Xpsr说明：" class="headerlink" title="Xpsr说明："></a>Xpsr说明：</h2><p><img src="https://i.loli.net/2020/03/08/UouIg1AOkTaCtrW.png" alt="特2.png"><br><img src="https://i.loli.net/2020/03/08/pPlAiLIhesaCRgc.png" alt="特3.png"></p>
+<h2 id="中断组说明："><a href="#中断组说明：" class="headerlink" title="中断组说明："></a>中断组说明：</h2><p><img src="https://i.loli.net/2020/03/08/HWNJixAaDwUTuF1.png" alt="特4.png"></p>
+<h2 id="control说明："><a href="#control说明：" class="headerlink" title="control说明："></a>control说明：</h2><p><img src="https://i.loli.net/2020/03/08/pzHQon1hyRB5bMW.png" alt="特5.png"></p>
+<h2 id="通过编程控制寄存器或通过异常来切换操作模式"><a href="#通过编程控制寄存器或通过异常来切换操作模式" class="headerlink" title="通过编程控制寄存器或通过异常来切换操作模式"></a>通过编程控制寄存器或通过异常来切换操作模式</h2><p><img src="https://i.loli.net/2020/03/08/Z1VaFn96pBGOksJ.png" alt="特6.png"></p>
+<h1 id="移动数据指令"><a href="#移动数据指令" class="headerlink" title="移动数据指令"></a>移动数据指令</h1><h2 id="普通寄存器之间："><a href="#普通寄存器之间：" class="headerlink" title="普通寄存器之间："></a>普通寄存器之间：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MOV R8, R3 </span><br><span class="line">MVN R8, R3 （MVN是将R3数据按位取反之后传送给R8）</span><br></pre></td></tr></table></figure>
+
+<h2 id="存储器和寄存器之间："><a href="#存储器和寄存器之间：" class="headerlink" title="存储器和寄存器之间："></a>存储器和寄存器之间：</h2><h3 id="单个数据加载存储：LDR和STR"><a href="#单个数据加载存储：LDR和STR" class="headerlink" title="单个数据加载存储：LDR和STR"></a>单个数据加载存储：LDR和STR</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LDRB Rd, [Rn, <span class="comment">#offset] ；LDRH Rd, [Rn, #offset] ；LDR Rd, [Rn, #offset] ；LDRD Rd1,Rd2, [Rn, #offset] </span></span><br><span class="line">STRB Rd, [Rn, <span class="comment">#offset] ；STRH Rd, [Rn, #offset] ；STR Rd, [Rn, #offset] ；STRD Rd1,Rd2, [Rn, #offset]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="多个数据加载：LDM和STM"><a href="#多个数据加载：LDM和STM" class="headerlink" title="多个数据加载：LDM和STM"></a>多个数据加载：LDM和STM</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">16位命令：</span><br><span class="line">LDMIA Rd!,&lt;reg list&gt;；STMIA Rd!,&lt;reg list&gt;</span><br><span class="line">32位命令：.W 操作代表32位 Thumb-2指令</span><br><span class="line">LDMIA.W Rd(!),&lt;reg list&gt;；LDMDB.W Rd(!),&lt;reg list&gt;；STMIA.W Rd(!),&lt;reg list&gt;；STMDB.W Rd(!),&lt;reg list&gt;；</span><br><span class="line">注意： IA是先操作后增加，DB是先减小在操作。</span><br></pre></td></tr></table></figure>
+
+<h3 id="索引前命令和索引后命令示例："><a href="#索引前命令和索引后命令示例：" class="headerlink" title="索引前命令和索引后命令示例："></a>索引前命令和索引后命令示例：</h3><p><img src="https://i.loli.net/2020/03/08/jPEOQW27kmX91qu.png" alt="索引前"><br><img src="https://i.loli.net/2020/03/08/W8YjnXHQvil4q6S.png" alt="索引后"></p>
+<h2 id="对于R13进行操作：pop和push"><a href="#对于R13进行操作：pop和push" class="headerlink" title="对于R13进行操作：pop和push"></a>对于R13进行操作：pop和push</h2><p><img src="https://i.loli.net/2020/03/08/xP6KfMlnXTGb5i8.png" alt="3.png"></p>
+<h2 id="对于特殊寄存器进行操作：-MRS-and-MSR。"><a href="#对于特殊寄存器进行操作：-MRS-and-MSR。" class="headerlink" title="对于特殊寄存器进行操作： MRS and MSR。"></a>对于特殊寄存器进行操作： MRS and MSR。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">除非您正在访问APSR，否则只能使用MSR或MRS以特权模式访问其他特殊寄存器</span><br><span class="line">MRS R0, PSR ; Read Processor status word into R0</span><br><span class="line">	MSR CONTROL, R1 ; Write value of R1 into control register</span><br></pre></td></tr></table></figure>
+
+<h2 id="对于立即数用MOV即可"><a href="#对于立即数用MOV即可" class="headerlink" title="对于立即数用MOV即可"></a>对于立即数用MOV即可</h2><p><img src="https://i.loli.net/2020/03/08/7inSZkYD6rQINbC.png" alt="4.png"></p>
+<h1 id="处理数据指令"><a href="#处理数据指令" class="headerlink" title="处理数据指令"></a>处理数据指令</h1><h2 id="加减乘除：ADD-ADC-SUB-MUL-DIV"><a href="#加减乘除：ADD-ADC-SUB-MUL-DIV" class="headerlink" title="加减乘除：ADD/ADC,SUB,MUL,DIV"></a>加减乘除：ADD/ADC,SUB,MUL,DIV</h2><p><img src="https://i.loli.net/2020/03/08/pEcJZ8exwbsNFYq.png" alt="加减乘除.png"></p>
+<h2 id="乘除32位指令-SMULL，SMLAL，UMULL，UMLAL"><a href="#乘除32位指令-SMULL，SMLAL，UMULL，UMLAL" class="headerlink" title="乘除32位指令:SMULL，SMLAL，UMULL，UMLAL"></a>乘除32位指令:SMULL，SMLAL，UMULL，UMLAL</h2><p><img src="https://i.loli.net/2020/03/08/cQ8iIheGwkprAzN.png" alt="32位乘除1.png"><br><img src="https://i.loli.net/2020/03/08/UcVHKBntrSXkTLy.png" alt="32位乘除2.png"></p>
+<h2 id="逻辑指令："><a href="#逻辑指令：" class="headerlink" title="逻辑指令："></a>逻辑指令：</h2><p><img src="https://i.loli.net/2020/03/08/DjLOIHgJRF1v2Uo.png" alt="逻辑指令.png"></p>
+<h2 id="移位操作："><a href="#移位操作：" class="headerlink" title="移位操作："></a>移位操作：</h2><p><img src="https://i.loli.net/2020/03/08/7GilRU45IOqjvEV.png" alt="移位操作1.png"><br><img src="https://i.loli.net/2020/03/08/g5ICKBhGjAOWci9.png" alt="移位操作2.png"></p>
+<h1 id="跳转指令"><a href="#跳转指令" class="headerlink" title="跳转指令"></a>跳转指令</h1><h2 id="跳出和调回"><a href="#跳出和调回" class="headerlink" title="跳出和调回"></a>跳出和调回</h2><p><img src="https://i.loli.net/2020/03/08/U9W7eSvm3M4fxp2.png" alt="跳转和调回.png"></p>
+<h2 id="跳转注意"><a href="#跳转注意" class="headerlink" title="跳转注意"></a>跳转注意</h2><p><img src="https://i.loli.net/2020/03/08/C4WuoewGHYfN8SL.png" alt="BL注意.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/08/cotex-m3-指令学习笔记(1)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-The-road-of-blog-after-vicissitudes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

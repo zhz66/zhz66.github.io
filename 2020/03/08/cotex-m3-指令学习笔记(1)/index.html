@@ -6,18 +6,38 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Step by step up</title>
+  <title>cotex-m3 指令学习笔记 | Step by step up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="����һ��С�׽����Ĳ��ͣ����͵���һЩ�������������������Լ�����취��">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Step by step up">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="特殊寄存器概述：特殊寄存器组成 Xpsr说明： 中断组说明： control说明： 通过编程控制寄存器或通过异常来切换操作模式 移动数据指令普通寄存器之间：12MOV R8, R3 MVN R8, R3 （MVN是将R3数据按位取反之后传送给R8）  存储器和寄存器之间：单个数据加载存储：LDR和STR12LDRB Rd, [Rn, #offset] ；LDRH Rd, [Rn, #offset">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cotex-m3 指令学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/03/08/cotex-m3-指令学习笔记(1)/index.html">
 <meta property="og:site_name" content="Step by step up">
-<meta property="og:description" content="����һ��С�׽����Ĳ��ͣ����͵���һЩ�������������������Լ�����취��">
+<meta property="og:description" content="特殊寄存器概述：特殊寄存器组成 Xpsr说明： 中断组说明： control说明： 通过编程控制寄存器或通过异常来切换操作模式 移动数据指令普通寄存器之间：12MOV R8, R3 MVN R8, R3 （MVN是将R3数据按位取反之后传送给R8）  存储器和寄存器之间：单个数据加载存储：LDR和STR12LDRB Rd, [Rn, #offset] ；LDRH Rd, [Rn, #offset">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/Gd7PtwFNY3MpIZu.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/UouIg1AOkTaCtrW.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/pPlAiLIhesaCRgc.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/HWNJixAaDwUTuF1.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/pzHQon1hyRB5bMW.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/Z1VaFn96pBGOksJ.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/jPEOQW27kmX91qu.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/W8YjnXHQvil4q6S.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/xP6KfMlnXTGb5i8.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/7inSZkYD6rQINbC.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/pEcJZ8exwbsNFYq.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/cQ8iIheGwkprAzN.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/UcVHKBntrSXkTLy.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/DjLOIHgJRF1v2Uo.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/7GilRU45IOqjvEV.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/g5ICKBhGjAOWci9.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/U9W7eSvm3M4fxp2.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/08/C4WuoewGHYfN8SL.png">
+<meta property="og:updated_time" content="2020-03-08T09:26:36.100Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Step by step up">
-<meta name="twitter:description" content="����һ��С�׽����Ĳ��ͣ����͵���һЩ�������������������Լ�����취��">
+<meta name="twitter:title" content="cotex-m3 指令学习笔记">
+<meta name="twitter:description" content="特殊寄存器概述：特殊寄存器组成 Xpsr说明： 中断组说明： control说明： 通过编程控制寄存器或通过异常来切换操作模式 移动数据指令普通寄存器之间：12MOV R8, R3 MVN R8, R3 （MVN是将R3数据按位取反之后传送给R8）  存储器和寄存器之间：单个数据加载存储：LDR和STR12LDRB Rd, [Rn, #offset] ；LDRH Rd, [Rn, #offset">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/08/Gd7PtwFNY3MpIZu.png">
   
     <link rel="alternative" href="/atom.xml" title="Step by step up" type="application/atom+xml">
   
@@ -157,184 +177,240 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-cotex-m3-指令学习笔记(1)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      cotex-m3 指令学习笔记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/08/cotex-m3-指令学习笔记(1)/" class="archive-article-date">
+
+        
+        <a href="/2020/03/08/cotex-m3-指令学习笔记(1)/" class="archive-article-date">
   	<time datetime="2020-03-08T06:25:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/08/cotex-m3-指令学习笔记(1)/">cotex-m3 指令学习笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="特殊寄存器概述："><a href="#特殊寄存器概述：" class="headerlink" title="特殊寄存器概述："></a>特殊寄存器概述：</h1><h2 id="特殊寄存器组成"><a href="#特殊寄存器组成" class="headerlink" title="特殊寄存器组成"></a>特殊寄存器组成</h2><p><img src="https://i.loli.net/2020/03/08/Gd7PtwFNY3MpIZu.png" alt="特1.png"></p>
+<h2 id="Xpsr说明："><a href="#Xpsr说明：" class="headerlink" title="Xpsr说明："></a>Xpsr说明：</h2><p><img src="https://i.loli.net/2020/03/08/UouIg1AOkTaCtrW.png" alt="特2.png"><br><img src="https://i.loli.net/2020/03/08/pPlAiLIhesaCRgc.png" alt="特3.png"></p>
+<h2 id="中断组说明："><a href="#中断组说明：" class="headerlink" title="中断组说明："></a>中断组说明：</h2><p><img src="https://i.loli.net/2020/03/08/HWNJixAaDwUTuF1.png" alt="特4.png"></p>
+<h2 id="control说明："><a href="#control说明：" class="headerlink" title="control说明："></a>control说明：</h2><p><img src="https://i.loli.net/2020/03/08/pzHQon1hyRB5bMW.png" alt="特5.png"></p>
+<h2 id="通过编程控制寄存器或通过异常来切换操作模式"><a href="#通过编程控制寄存器或通过异常来切换操作模式" class="headerlink" title="通过编程控制寄存器或通过异常来切换操作模式"></a>通过编程控制寄存器或通过异常来切换操作模式</h2><p><img src="https://i.loli.net/2020/03/08/Z1VaFn96pBGOksJ.png" alt="特6.png"></p>
+<h1 id="移动数据指令"><a href="#移动数据指令" class="headerlink" title="移动数据指令"></a>移动数据指令</h1><h2 id="普通寄存器之间："><a href="#普通寄存器之间：" class="headerlink" title="普通寄存器之间："></a>普通寄存器之间：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MOV R8, R3 </span><br><span class="line">MVN R8, R3 （MVN是将R3数据按位取反之后传送给R8）</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="存储器和寄存器之间："><a href="#存储器和寄存器之间：" class="headerlink" title="存储器和寄存器之间："></a>存储器和寄存器之间：</h2><h3 id="单个数据加载存储：LDR和STR"><a href="#单个数据加载存储：LDR和STR" class="headerlink" title="单个数据加载存储：LDR和STR"></a>单个数据加载存储：LDR和STR</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LDRB Rd, [Rn, <span class="comment">#offset] ；LDRH Rd, [Rn, #offset] ；LDR Rd, [Rn, #offset] ；LDRD Rd1,Rd2, [Rn, #offset] </span></span><br><span class="line">STRB Rd, [Rn, <span class="comment">#offset] ；STRH Rd, [Rn, #offset] ；STR Rd, [Rn, #offset] ；STRD Rd1,Rd2, [Rn, #offset]</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="多个数据加载：LDM和STM"><a href="#多个数据加载：LDM和STM" class="headerlink" title="多个数据加载：LDM和STM"></a>多个数据加载：LDM和STM</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">16位命令：</span><br><span class="line">LDMIA Rd!,&lt;reg list&gt;；STMIA Rd!,&lt;reg list&gt;</span><br><span class="line">32位命令：.W 操作代表32位 Thumb-2指令</span><br><span class="line">LDMIA.W Rd(!),&lt;reg list&gt;；LDMDB.W Rd(!),&lt;reg list&gt;；STMIA.W Rd(!),&lt;reg list&gt;；STMDB.W Rd(!),&lt;reg list&gt;；</span><br><span class="line">注意： IA是先操作后增加，DB是先减小在操作。</span><br></pre></td></tr></table></figure>
+
+<h3 id="索引前命令和索引后命令示例："><a href="#索引前命令和索引后命令示例：" class="headerlink" title="索引前命令和索引后命令示例："></a>索引前命令和索引后命令示例：</h3><p><img src="https://i.loli.net/2020/03/08/jPEOQW27kmX91qu.png" alt="索引前"><br><img src="https://i.loli.net/2020/03/08/W8YjnXHQvil4q6S.png" alt="索引后"></p>
+<h2 id="对于R13进行操作：pop和push"><a href="#对于R13进行操作：pop和push" class="headerlink" title="对于R13进行操作：pop和push"></a>对于R13进行操作：pop和push</h2><p><img src="https://i.loli.net/2020/03/08/xP6KfMlnXTGb5i8.png" alt="3.png"></p>
+<h2 id="对于特殊寄存器进行操作：-MRS-and-MSR。"><a href="#对于特殊寄存器进行操作：-MRS-and-MSR。" class="headerlink" title="对于特殊寄存器进行操作： MRS and MSR。"></a>对于特殊寄存器进行操作： MRS and MSR。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">除非您正在访问APSR，否则只能使用MSR或MRS以特权模式访问其他特殊寄存器</span><br><span class="line">MRS R0, PSR ; Read Processor status word into R0</span><br><span class="line">	MSR CONTROL, R1 ; Write value of R1 into control register</span><br></pre></td></tr></table></figure>
+
+<h2 id="对于立即数用MOV即可"><a href="#对于立即数用MOV即可" class="headerlink" title="对于立即数用MOV即可"></a>对于立即数用MOV即可</h2><p><img src="https://i.loli.net/2020/03/08/7inSZkYD6rQINbC.png" alt="4.png"></p>
+<h1 id="处理数据指令"><a href="#处理数据指令" class="headerlink" title="处理数据指令"></a>处理数据指令</h1><h2 id="加减乘除：ADD-ADC-SUB-MUL-DIV"><a href="#加减乘除：ADD-ADC-SUB-MUL-DIV" class="headerlink" title="加减乘除：ADD/ADC,SUB,MUL,DIV"></a>加减乘除：ADD/ADC,SUB,MUL,DIV</h2><p><img src="https://i.loli.net/2020/03/08/pEcJZ8exwbsNFYq.png" alt="加减乘除.png"></p>
+<h2 id="乘除32位指令-SMULL，SMLAL，UMULL，UMLAL"><a href="#乘除32位指令-SMULL，SMLAL，UMULL，UMLAL" class="headerlink" title="乘除32位指令:SMULL，SMLAL，UMULL，UMLAL"></a>乘除32位指令:SMULL，SMLAL，UMULL，UMLAL</h2><p><img src="https://i.loli.net/2020/03/08/cQ8iIheGwkprAzN.png" alt="32位乘除1.png"><br><img src="https://i.loli.net/2020/03/08/UcVHKBntrSXkTLy.png" alt="32位乘除2.png"></p>
+<h2 id="逻辑指令："><a href="#逻辑指令：" class="headerlink" title="逻辑指令："></a>逻辑指令：</h2><p><img src="https://i.loli.net/2020/03/08/DjLOIHgJRF1v2Uo.png" alt="逻辑指令.png"></p>
+<h2 id="移位操作："><a href="#移位操作：" class="headerlink" title="移位操作："></a>移位操作：</h2><p><img src="https://i.loli.net/2020/03/08/7GilRU45IOqjvEV.png" alt="移位操作1.png"><br><img src="https://i.loli.net/2020/03/08/g5ICKBhGjAOWci9.png" alt="移位操作2.png"></p>
+<h1 id="跳转指令"><a href="#跳转指令" class="headerlink" title="跳转指令"></a>跳转指令</h1><h2 id="跳出和调回"><a href="#跳出和调回" class="headerlink" title="跳出和调回"></a>跳出和调回</h2><p><img src="https://i.loli.net/2020/03/08/U9W7eSvm3M4fxp2.png" alt="跳转和调回.png"></p>
+<h2 id="跳转注意"><a href="#跳转注意" class="headerlink" title="跳转注意"></a>跳转注意</h2><p><img src="https://i.loli.net/2020/03/08/C4WuoewGHYfN8SL.png" alt="BL注意.png"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢各位老板赏的糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/imgs/reward.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/08/cotex-m3-指令学习笔记(1)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/25/The-road-of-blog-after-vicissitudes/" class="archive-article-date">
-  	<time datetime="2020-02-25T14:03:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/25/The-road-of-blog-after-vicissitudes/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">The road of blog after vicissitudes</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/The-road-of-blog-after-vicissitudes/">The road of blog after vicissitudes</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="cotex-m3-指令学习笔记(1)" data-title="cotex-m3 指令学习笔记" data-url="http://yoursite.com/2020/03/08/cotex-m3-指令学习笔记(1)/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2020/03/08/cotex-m3-指令学习笔记(1)/", 
+    sourceId: "cotex-m3-指令学习笔记(1)",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/25/科技论文写作-1/" class="archive-article-date">
-  	<time datetime="2020-02-25T13:30:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/科技论文写作-1/">科技论文写作-1</a>
-    </h1>
+  <div id="SOHUCS" sid="cotex-m3-指令学习笔记(1)" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/24/Embeded-design-class-1/" class="archive-article-date">
-  	<time datetime="2020-02-24T12:20:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/24/Embeded-design-class-1/">Embeded design class 1</a>
-    </h1>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/23/安装Brian2那些事/" class="archive-article-date">
-  	<time datetime="2020-02-23T14:38:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/23/安装Brian2那些事/">安装Brian2那些事</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/22/Spiking-Notes-1/" class="archive-article-date">
-  	<time datetime="2020-02-22T07:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/22/Spiking-Notes-1/">Spiking Notes(1)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -357,8 +433,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
